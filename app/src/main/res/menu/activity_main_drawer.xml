@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_listacompra"
+            android:icon="@drawable/ic_picnic_basket"
+            android:title="Lista Compra" />
+        <item
+            android:id="@+id/nav_productos"
+            android:icon="@drawable/ic_product"
+            android:title="Productos" />
+        <item
+            android:id="@+id/nav_tiendas"
+            android:icon="@drawable/ic_shop"
+            android:title="Tiendas" />
+
+    </group>
+
+
+
+</menu>

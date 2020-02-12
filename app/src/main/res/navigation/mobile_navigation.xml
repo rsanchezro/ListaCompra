@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_listacompra">
+
+    <fragment
+        android:id="@+id/nav_listacompra"
+        android:name="com.roberto.listacompra.ui.listas_compra.ListaCompraFragment"
+        android:label="LISTAS DE LA COMPRA"
+        tools:layout="@layout/fragment_listacompra" />
+
+    <fragment
+        android:id="@+id/nav_tiendas"
+        android:name="com.roberto.listacompra.ui.tiendas.TiendaFragment"
+        android:label="TIENDAS"
+        tools:layout="@layout/fragment_tiendas" />
+
+    <fragment
+        android:id="@+id/nav_productos"
+        android:name="com.roberto.listacompra.ui.productos.ProductoFragment"
+        android:label="PRODUCTOS"
+        tools:layout="@layout/fragment_productos" />
+
+
+
+</navigation>
