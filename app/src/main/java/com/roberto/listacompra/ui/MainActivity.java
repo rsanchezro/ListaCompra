@@ -1,10 +1,9 @@
-package com.roberto.listacompra;
+package com.roberto.listacompra.ui;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
@@ -15,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.roberto.listacompra.R;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
