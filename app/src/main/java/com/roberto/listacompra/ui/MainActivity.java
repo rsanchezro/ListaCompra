@@ -3,11 +3,10 @@ package com.roberto.listacompra.ui;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -15,6 +14,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.roberto.listacompra.R;
+import com.roberto.listacompra.ui.ViewModel.ListaCompraViewModel;
+import com.roberto.listacompra.ui.listas_compra.ListaCompraViewModelbis;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -29,6 +30,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private ListaCompraViewModel listaCompraViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /*
+        Cargamos la base de datos desde los archivos JSON
+
+         */
+        listaCompraViewModel= ViewModelProviders.
+                of(this).get(ListaCompraViewModel.class);
+
+        if(listaCompraViewModel.getProductos().getValue().size()==0)
+        {
+            getAssets().open("productos.json");
+
+            listaCompraViewModel.insertarProductos(listaproductos);
+        }
+
+
+
+
         FloatingActionButton fab = findViewById(R.id.fab);
         //Floating action BUTTON PARA AÑADIR UNA NUEVA LISTA DE LA COMPRA
         fab.setOnClickListener(new View.OnClickListener() {

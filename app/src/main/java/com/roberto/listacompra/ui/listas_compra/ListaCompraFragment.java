@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -16,12 +15,12 @@ import com.roberto.listacompra.R;
 
 public class ListaCompraFragment extends Fragment {
 
-    private ListaCompraViewModel listacompraViewModel;
+    private ListaCompraViewModelbis listacompraViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         listacompraViewModel =
-                ViewModelProviders.of(this).get(ListaCompraViewModel.class);
+                ViewModelProviders.of(this).get(ListaCompraViewModelbis.class);
         View root = inflater.inflate(R.layout.fragment_listacompra, container, false);
 
         listacompraViewModel.getText().observe(this, new Observer<String>() {

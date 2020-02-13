@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ListaCompraViewModel extends ViewModel {
+public class ListaCompraViewModelbis extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ListaCompraViewModel() {
+    public ListaCompraViewModelbis() {
         mText = new MutableLiveData<>();
         mText.setValue("Este es el fragmento de las Listas de la Compra");
     }
